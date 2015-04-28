@@ -1,0 +1,78 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800,900' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    body {
+    	text-align: center;
+    	margin: 0 auto;
+    	padding-top: 10%;
+    	font-family: 'Raleway';
+    }
+
+    h2 {
+    	font-weight: 200;
+    }
+
+    h1, h2 {
+    	color: white;
+    }
+
+    .title {
+    	font-weight: 900;
+    }
+
+    .kevin-pic {
+    	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+    }
+
+    .yes-gradient {
+		background: rgba(237,92,92,1);
+		background: -moz-linear-gradient(left, rgba(237,92,92,1) 0%, rgba(240,132,0,1) 100%);
+		background: -webkit-gradient(left top, right top, color-stop(0%, rgba(237,92,92,1)), color-stop(100%, rgba(240,132,0,1)));
+		background: -webkit-linear-gradient(left, rgba(237,92,92,1) 0%, rgba(240,132,0,1) 100%);
+		background: -o-linear-gradient(left, rgba(237,92,92,1) 0%, rgba(240,132,0,1) 100%);
+		background: -ms-linear-gradient(left, rgba(237,92,92,1) 0%, rgba(240,132,0,1) 100%);
+		background: linear-gradient(to right, rgba(237,92,92,1) 0%, rgba(240,132,0,1) 100%);
+    }
+
+    .no-gradient {
+		background: rgba(50,43,255,1);
+		background: -moz-linear-gradient(left, rgba(50,43,255,1) 0%, rgba(109,252,228,1) 100%);
+		background: -webkit-gradient(left top, right top, color-stop(0%, rgba(50,43,255,1)), color-stop(100%, rgba(109,252,228,1)));
+		background: -webkit-linear-gradient(left, rgba(50,43,255,1) 0%, rgba(109,252,228,1) 100%);
+		background: -o-linear-gradient(left, rgba(50,43,255,1) 0%, rgba(109,252,228,1) 100%);
+		background: -ms-linear-gradient(left, rgba(50,43,255,1) 0%, rgba(109,252,228,1) 100%);
+		background: linear-gradient(to right, rgba(50,43,255,1) 0%, rgba(109,252,228,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#322bff', endColorstr='#6dfce4', GradientType=1 );
+    }
+
+    </style>
+</head>
+
+
+    <body>
+    	<h1 class="title">Is Kevin Here?</h1>
+    	<h2 class="answer"></h2>
+    	<img class="kevin-pic" src="http://i.imgur.com/PuZWj31.gif">
+
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    	<script type="text/javascript">
+    		var affirmative = "Yes! He's here! It's a miracle!";
+    		var negatory = "We're sorry. Your Kevin is in another castle.";
+
+    		var yes_no = Math.floor(Math.random() * 2) + 1;
+    		var choice;
+
+    		if (yes_no === 1) {
+    			choice = affirmative;
+    			$('body').toggleClass('yes-gradient');
+    		} else {
+    			choice = negatory;
+    			$('body').toggleClass('no-gradient');
+    		}
+
+    		$('.answer').append(choice);
+    	</script>
+    </body>
+</html>
