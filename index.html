@@ -56,24 +56,54 @@
     	<h1 class="title">Is Kevin Here?</h1>
     	<h2 class="answer"></h2>
     	<div><img class="kevin-pic" src="http://i.imgur.com/PuZWj31.gif"></div>
-
+        <script src="js/tabletop.js"></script>
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     	<script type="text/javascript">
-    		var affirmative = "Yes! He's here! It's a miracle!";
-    		var negatory = "We're sorry. Your Kevin is in another castle.";
+            var sheetsURL = '1wcy-iE3QWs-2iN2hIBO6X1ro7UBdCwoYhRrYNFmR6CU';
+            Tabletop.init( { 
+                key: sheetsURL, 
+                callback: showInfo,
+                debug: true, 
+                parseNumbers: true, 
+                simpleSheet: true
+            } );
 
-    		var yes_no = Math.floor(Math.random() * 2) + 1;
-    		var choice;
+            function showInfo(data, tabletop){
+            //let's put all the data in one variable
+                kevinData = data;
+                console.log( "Here is your data", kevinData);
+                isKevinHere(kevinData);
+            }
 
-    		if (yes_no === 1) {
-    			choice = affirmative;
-    			$('body').toggleClass('yes-gradient');
-    		} else {
-    			choice = negatory;
-    			$('body').toggleClass('no-gradient');
-    		}
+            function isKevinHere(internetWisdom) {
+                var kevinWhereabouts = internetWisdom[0];
+        		var affirmative = "Yes! He's here! It's a miracle!";
+        		var negatory = "We're sorry. Your Kevin is in another castle.";
+        		var yes_no = kevinWhereabouts.inoffice;
+        		var choice;
 
-    		$('.answer').append(choice);
+        		if (yes_no === "yes") {
+        			choice = affirmative;
+        			$('body').toggleClass('yes-gradient');
+        		} else {
+        			choice = negatory;
+        			$('body').toggleClass('no-gradient');
+        		}
+
+                var locationDetailsText = "<p>Kevin was last seen" + 
+                                        if(yes_no === "yes") {
+                                            return " leaving the office ";
+                                        } else {
+                                            return " entering the office ";
+                                        } +
+                                        "on " + kevinWhereabouts.date +
+                                        " at about " + kevinWhereabouts.time +
+                                        "</p>";
+
+                $('.answer').append(choice);
+                $('.answer').append(locationDetailsText);
+            }
+
     	</script>
     </body>
 </html>
