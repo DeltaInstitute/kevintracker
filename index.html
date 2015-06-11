@@ -90,12 +90,15 @@
         			$('body').toggleClass('no-gradient');
         		}
 
-                var locationDetailsText = "<p>Kevin was last seen" + 
-                                        if(yes_no === "yes") {
-                                            return " leaving the office ";
-                                        } else {
-                                            return " entering the office ";
-                                        } +
+                var imHere;
+
+                if(yes_no === "yes") {
+                    imHere = " leaving the office ";
+                } else {
+                    imHere = " entering the office ";
+                };
+
+                var locationDetailsText = "<p>Kevin was last seen" + imHere +
                                         "on " + kevinWhereabouts.date +
                                         " at about " + kevinWhereabouts.time +
                                         "</p>";
