@@ -88,18 +88,21 @@
             function kevinTime() {
                 var date = new Date();
                 var hours = date.getHours();
-                var minutes = date.getMinutes();
+                var minutes = ('0' + date.getMinutes()).slice(-2);
                 var formattedTime;
                 var amPm;
 
                 var regTime = function(hr, min) {
                     var hrs = hr;
                     var mins = min;
-                    if (hrs > 12) {
+                    if (hrs === 0) {
+                        hrs = 12;
+                        amPm = 'am';
+                    } else if (hrs > 12) {
                         hrs = hrs - 12;
                         amPm = 'pm';
                     } else {
-                        amPm = 'am'
+                        amPm = 'am';
                     }
 
                     formattedTime = hrs + ':' + mins + ' ' + amPm;
