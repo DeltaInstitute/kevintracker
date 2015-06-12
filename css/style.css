@@ -150,9 +150,13 @@ header.header-scroll {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#322bff', endColorstr='#6dfce4', GradientType=1 );
 }
 
-@media (max-width: 600px) {
+@media (max-width: 690px) {
     body {
         padding-top: 10em;
+    }
+
+    .main-content {
+        max-width: 95%;
     }
 }
 

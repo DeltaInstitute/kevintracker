@@ -10,7 +10,7 @@
     	<header>
             <nav>
                 <h1>Kevin Tracker</h1>
-                <h3>Do you know where your Kevin is?</h3>
+                <h3>It's <span class="current-time"></span>. Do you know where your Kevin is?</h3>
                 <h3 class="locate-button">Find Kevin</h3>
             </nav>
         </header>
@@ -84,6 +84,46 @@
                             });
             });
 
+            $('.current-time').append(kevinTime());
+
+            function kevinTime() {
+                var date = new Date();
+                var hours = date.getHours();
+                var minutes = date.getMinutes();
+                var formattedTime;
+                var amPm;
+
+                var regTime = function(hr, min) {
+                    var hrs = hr;
+                    var mins = min;
+                    if (hrs > 12) {
+                        hrs = hrs - 12;
+                        amPm = 'pm';
+                    } else {
+                        amPm = 'am'
+                    }
+
+                    formattedTime = hrs + ':' + mins + ' ' + amPm;
+                    return formattedTime;
+                }
+
+                return regTime(hours, minutes);
+
+            }
+
     	</script>
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
