@@ -15,6 +15,12 @@ h2 {
 	font-weight: 200;
 }
 
+a {
+    text-decoration: none;
+    font-weight: 200;
+    color: #555;
+}
+
 header {
     width: 55%;
     background-color: none;
@@ -52,6 +58,11 @@ header.header-scroll {
     margin: 3em auto;
     border: 3px solid #777;
     background: rgba(255, 255, 255, 0.8);
+    font-weight: 200;
+}
+
+.try-again {
+    margin: 1em auto;
 }
 
 .locate-button:hover {
@@ -122,7 +133,7 @@ header.header-scroll {
 }
 
 .answer {
-    margin: 6em auto 0em auto;
+    margin: 3em auto 0em auto;
     color: #fff;
 }
 
