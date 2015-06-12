@@ -59,14 +59,27 @@ header.header-scroll {
     border: 3px solid #777;
     background: rgba(255, 255, 255, 0.8);
     font-weight: 200;
+    transition: all 0.1s linear;
 }
 
 .try-again {
+    padding: 0.5em;
+    font-size: 1.5em;
+    width: 35%;
+    border: 3px solid #fff;
     margin: 1em auto;
+    font-weight: 200;
+    color: #fff;
+    background: rgba(255, 255, 255, 0);
+    transition: all 0.1s linear;
 }
 
 .locate-button:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.try-again:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .choice {
