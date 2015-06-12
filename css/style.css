@@ -178,7 +178,7 @@ header.header-scroll {
     }
 
     .answer {
-        margin-top: 2em;
+        margin-top: 0.2em;
     }
 
     h2 .choice {
@@ -187,6 +187,7 @@ header.header-scroll {
 
     .answer p {
         font-size: 1.2em;
+        margin-bottom: 0;
     }
 }
 
