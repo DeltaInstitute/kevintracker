@@ -50,12 +50,12 @@ header.header-scroll {
     font-size: 1.5em;
     width: 35%;
     margin: 3em auto;
-    border: 2px solid #999;
+    border: 3px solid #777;
     background-color: #fff;
 }
 
 .locate-button:hover {
-    background-color: #ccc;
+    background-color: #ddd;
 }
 
 .choice {
@@ -149,6 +149,7 @@ header.header-scroll {
 	background: linear-gradient(to right, rgba(50,43,255,1) 0%, rgba(109,252,228,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#322bff', endColorstr='#6dfce4', GradientType=1 );
 }
+
 
 @media (max-width: 690px) {
     body {
