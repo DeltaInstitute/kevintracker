@@ -118,6 +118,7 @@ header.header-scroll {
 .kevin-pic {
 	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
 	margin: 2em auto 2em auto;
+    max-width: 100%;
 }
 
 .answer {
@@ -151,13 +152,41 @@ header.header-scroll {
 }
 
 
-@media (max-width: 690px) {
+@media screen and (max-width: 690px) {
     body {
-        padding-top: 10em;
+        padding-top: 2em;
+    }
+
+    header {
+        width: 98%;
+    }
+
+    header h1 {
+        font-size: 3em;
+    }
+
+    header h3 {
+        font-size: 1.5em;
+    }
+
+    .locate-button {
+        width: 50%;
     }
 
     .main-content {
         max-width: 95%;
+    }
+
+    .answer {
+        margin-top: 2em;
+    }
+
+    h2 .choice {
+        font-size: 1.5em;
+    }
+
+    .answer p {
+        font-size: 1.2em;
     }
 }
 
