@@ -158,6 +158,7 @@ header.header-scroll {
     }
 
     header {
+        margin-top: 5em;
         width: 98%;
     }
 
